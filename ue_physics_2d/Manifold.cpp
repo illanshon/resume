@@ -24,9 +24,6 @@ void Manifold::Initialize( void )
               A->velocity - Cross( A->angularVelocity, ra );
 
 
-    // Determine if we should perform a resting collision or not
-    // The idea is if the only thing moving this object is gravity,
-    // then the collision should be performed without any restitution
     if(rv.LenSqr( ) < (dtGlobal * gravity).LenSqr( ) + EPSILON)
       e = 0.0f;
   }
